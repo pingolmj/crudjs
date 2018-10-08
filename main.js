@@ -7,7 +7,7 @@ function addUser(){
   var inputdata = document.getElementById('data').value;
   var html =  '<div class="row" id="data'+counter+'" style="margin-bottom:15px;">'+
     '<div class="col-md-6 col-sm-12 col-xs-12">'+
-      '<input type="text" class="form-control" value="'+inputdata+'" id="'+inputdata+'" disabled>'+
+      '<input type="text" class="form-control" value="'+inputdata+'" disabled>'+
     '</div>'+
     '<div class="col-md-2 col-sm-4 col-xs-4">'+
       '<button type="button" class="btn btn-success" onclick="edit(this.id)" id="edit'+counter+'">Edit</button>'+
@@ -23,14 +23,10 @@ function addUser(){
 
   if(inputdata == 0){
      alert("Please enter a user");
-  }
-
-  if(inputdata != inputdata){
+  }else{
     document.getElementById('userList').insertAdjacentHTML('beforeend', html);
     document.getElementById('data').value = '';
     counter++;
-  }else{
-    alert("This User is already existing")
   }
 }
 
